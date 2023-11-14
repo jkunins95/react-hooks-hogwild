@@ -1,7 +1,7 @@
 import React from "react";
 import piggy from "../assets/porco.png";
 
-const Nav = ({ hogs }) => {
+const Nav = () => {
 	return (
 		<div className="navWrapper">
 			<span className="headerText">HogWild</span>
@@ -11,12 +11,6 @@ const Nav = ({ hogs }) => {
 			<span className="normalText">
 				A React App for County Fair Hog Fans
 			</span>
-			{hogs.map((hog) => (
-				<div key={hog.name}>
-					<h2>{hog.name}</h2>
-					<img src={hog.image} alt="Hog Image" />
-				</div>
-			))}
 		</div>
 	);
 };
