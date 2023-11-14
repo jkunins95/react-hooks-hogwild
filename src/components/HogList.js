@@ -1,9 +1,9 @@
 import React from "react";
 import hogs from "../porkers_data";
 
-import Hog from "./Hog";
+import HogDetails from "./HogDetails";
 
-const HogList = () => {
+const HogList = ({ hog }) => {
   return ( 
     <div className="ui grid container">
       {hogs.map((hog) => (
@@ -15,7 +15,7 @@ const HogList = () => {
             <div className="content">
               <a className="header">{hog.name}</a>
           <button>Show Details</button>
-          <Hog 
+          <HogDetails
             key={hog.name}
             hog={hog}
             name={hog.name}
