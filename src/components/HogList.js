@@ -19,6 +19,7 @@ const HogList = () => {
         {showGreasedHogs ? 'Show All Hogs' : 'Show Greased Hogs'}
       </button>
       <div className="ui grid container">
+        {/* FilteredHogs needs to be changed in order to show which hogs are greased or not */}
         {filteredHogs.map((hog) => (
           <div className="ui eight wide column" key={hog.name}>
             <div className="ui card">
