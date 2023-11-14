@@ -1,18 +1,28 @@
-const Hog = ({ name, image, specialty, weight, greased, highest}) => {
-  return ( 
-    <div className="ui card eight wide column">
-      <div className="hog img container">
-        <img className="hog-img" src={image} alt="Hog Image" />
-      </div>
-      <div className="details container">
-        <h3>{name}</h3>
-        <p>{specialty}</p>
-        <p>{weight}</p>
-        <p>{greased}</p>
-        <p>{highest}</p>
-      </div>
+import React, { useState } from 'react';
+
+const HogDetails = ({ name, specialty, weight, greased, highestMedal }) => {
+  const [showDetails, setShowDetails] = useState(false);
+
+  function toggleDetails() {
+    setShowDetails(!showDetails);
+  }
+
+  return (
+    <div className="hog-tile" onClick={toggleDetails}>
+      <h2>{name}</h2>
+      <button onClick={toggleDetails}>
+        {showDetails ? 'Hide Details' : 'Show Details'}
+      </button>
+      {showDetails && (
+        <div>
+          <p>Specialty: {specialty}</p>
+          <p>Weight: {weight}</p>
+          <p>Greased: {greased? 'Yes' : 'No'}</p>
+          <p>Highest Medal: {highestMedal}</p>
+        </div>
+      )}
     </div>
   );
 }
 
-export default Hog;
+export default HogDetails;

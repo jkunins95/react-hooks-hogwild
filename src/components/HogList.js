@@ -3,7 +3,7 @@ import hogs from "../porkers_data";
 
 import HogDetails from "./HogDetails";
 
-const HogList = ({ hog }) => {
+const HogList = () => {
   return ( 
     <div className="ui grid container">
       {hogs.map((hog) => (
@@ -14,16 +14,11 @@ const HogList = ({ hog }) => {
             </div>
             <div className="content">
               <a className="header">{hog.name}</a>
-          <button>Show Details</button>
           <HogDetails
-            key={hog.name}
-            hog={hog}
-            name={hog.name}
-            image={hog.image}
             specialty={hog.specialty}
             greased={hog.greased}
             weight={hog.weight}
-            highest={hog["highest medal achived"]}
+            highestMedal={hog["highest medal achived"]}
           />
             </div>
           </div>
