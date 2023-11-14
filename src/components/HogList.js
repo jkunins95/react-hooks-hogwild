@@ -1,6 +1,8 @@
 import React from "react";
 import hogs from "../porkers_data";
 
+import Hog from "./Hog";
+
 const HogList = () => {
   return ( 
     <div className="ui grid container">
@@ -12,6 +14,17 @@ const HogList = () => {
             </div>
             <div className="content">
               <a className="header">{hog.name}</a>
+          <button>Show Details</button>
+          <Hog 
+            key={hog.name}
+            hog={hog}
+            name={hog.name}
+            image={hog.image}
+            specialty={hog.specialty}
+            greased={hog.greased}
+            weight={hog.weight}
+            highest={hog["highest medal achived"]}
+          />
             </div>
           </div>
         </div>
