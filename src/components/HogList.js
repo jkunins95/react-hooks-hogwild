@@ -18,7 +18,7 @@ const HogList = () => {
             specialty={hog.specialty}
             greased={hog.greased}
             weight={hog.weight}
-            highestMedal={hog["highest medal achived"]}
+            highestMedal={hog["highest medal achieved"]}
           />
             </div>
           </div>
